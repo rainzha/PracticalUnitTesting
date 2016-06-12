@@ -1,6 +1,7 @@
-package org.rainzha.practicalunittesting;
+package org.rainzha.practicalunittesting.money;
 
 import org.junit.Test;
+import org.rainzha.practicalunittesting.money.Money;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

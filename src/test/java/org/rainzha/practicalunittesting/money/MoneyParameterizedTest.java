@@ -1,9 +1,10 @@
-package org.rainzha.practicalunittesting;
+package org.rainzha.practicalunittesting.money;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.rainzha.practicalunittesting.money.Money;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package org.rainzha.practicalunittesting;
+package org.rainzha.practicalunittesting.money;
 
 public class Money {
     private final int amount;
