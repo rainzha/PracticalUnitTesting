@@ -1,6 +1,7 @@
 package org.rainzha.practicalunittesting.expectedexceptions;
 
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static com.googlecode.catchexception.CatchException.catchException;
@@ -12,6 +13,7 @@ public class ExpectedExceptionMessageBDDTest {
     Phone phone = new Phone();
 
     @Test
+    @Ignore
     public void shouldThrowIAEForEmptyNumber() {
         catchException(phone).setNumber(null);
 
@@ -21,6 +23,7 @@ public class ExpectedExceptionMessageBDDTest {
     }
 
     @Test
+    @Ignore
     public void shouldThrowIAEForPlusPrefixedNumber() {
         catchException(phone).setNumber("+123");
 

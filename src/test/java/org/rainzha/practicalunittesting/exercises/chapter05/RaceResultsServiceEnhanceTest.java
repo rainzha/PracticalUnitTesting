@@ -3,6 +3,7 @@ package org.rainzha.practicalunittesting.exercises.chapter05;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 import org.rainzha.practicalunittesting.raceresults.Client;
 import org.rainzha.practicalunittesting.raceresults.Message;
 import org.rainzha.practicalunittesting.raceresults.RaceResultsService;
@@ -71,5 +72,7 @@ public class RaceResultsServiceEnhanceTest {
     @Test
     public void unSubscribedClientRemoveSubscriberShouldNoOperation(){
         raceResults.removeSubscriber(clientA);
+
+        Mockito.verifyZeroInteractions(clientA);
     }
 }
