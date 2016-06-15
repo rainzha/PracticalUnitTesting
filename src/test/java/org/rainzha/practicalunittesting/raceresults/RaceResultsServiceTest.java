@@ -1,15 +1,27 @@
 package org.rainzha.practicalunittesting.raceresults;
 
 
+import org.junit.Before;
 import org.junit.Test;
+import org.rainzha.practicalunittesting.exercises.chapter05.Log;
+import org.rainzha.practicalunittesting.exercises.chapter05.MessageCategory;
 
 import static org.mockito.Mockito.*;
 
 public class RaceResultsServiceTest {
-    private RaceResultsService raceResults = new RaceResultsService();
-    private Message message = mock(Message.class);
-    private Client clientA = mock(Client.class, "clientA");
-    private Client clientB = mock(Client.class, "clientB");
+    private RaceResultsService raceResults;
+    private Message message;
+    private Client clientA;
+    private Client clientB;
+
+    @Before
+    public void setUp() {
+        raceResults = new RaceResultsService(new Log());
+        message = new Message();
+        message.setMessageCategory(MessageCategory.NONE);
+        clientA = mock(Client.class, "clientA");
+        clientB = mock(Client.class, "clientB");
+    }
 
     // zero subscribers
     @Test
